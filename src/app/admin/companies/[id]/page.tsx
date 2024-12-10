@@ -9,7 +9,7 @@ export interface PageProps {
 }
 
 export default function Page({ params }: PageProps) {
-  useEffect(() => {
+   useEffect(() => {
     const id = Number.parseInt(params.id);
     if (Number.isNaN(id)) {
       notFound();
@@ -17,7 +17,7 @@ export default function Page({ params }: PageProps) {
   }, [params.id]);
   return (
     <>
-      <Header>Company ({params.id})</Header>
+      <Header>Companies ({params.id})</Header>
     </>
   );
 }
